@@ -1,0 +1,38 @@
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DigitalPocket.exe.config
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DigitalPocket.exe
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DigitalPocket.pdb
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.csprojAssemblyReference.cache
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Form1.resources
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Properties.Resources.resources
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.csproj.GenerateResource.cache
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.csproj.CoreCompileInputs.cache
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.csproj.CopyComplete
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.exe
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.pdb
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.AddTransaction.resources
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\EntityFramework.dll
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\bin\Debug\EntityFramework.xml
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Login.resources
+C:\Users\Ahsan Ismail\source\repos\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Register.resources
+H:\DigitalPocket\DigitalPocket\bin\Debug\DigitalPocket.exe.config
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.exe
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.pdb
+H:\DigitalPocket\DigitalPocket\bin\Debug\DigitalPocket.exe
+H:\DigitalPocket\DigitalPocket\bin\Debug\DigitalPocket.pdb
+H:\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+H:\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar2.dll
+H:\DigitalPocket\DigitalPocket\bin\Debug\EntityFramework.dll
+H:\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+H:\DigitalPocket\DigitalPocket\bin\Debug\DevComponents.DotNetBar2.xml
+H:\DigitalPocket\DigitalPocket\bin\Debug\EntityFramework.xml
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.csprojResolveAssemblyReference.cache
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.AddTransaction.resources
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Form1.resources
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Login.resources
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Properties.Resources.resources
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.Register.resources
+H:\DigitalPocket\DigitalPocket\obj\Debug\DigitalPocket.csproj.GenerateResource.Cache

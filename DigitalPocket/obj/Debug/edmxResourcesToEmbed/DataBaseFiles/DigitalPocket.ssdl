@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DigitalPocketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PocketUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="Image" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="TransactionName" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="Ammount" Type="money" />
+    <Property Name="OriginAccount" Type="varchar" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Note" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="UWallet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="Ammount" Type="money" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <Association Name="FK_Transaction_PocketUser">
+    <End Role="PocketUser" Type="Self.PocketUser" Multiplicity="0..1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PocketUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UWallet_PocketUser">
+    <End Role="PocketUser" Type="Self.PocketUser" Multiplicity="0..1" />
+    <End Role="UWallet" Type="Self.UWallet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PocketUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UWallet">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DigitalPocketModelStoreContainer">
+    <EntitySet Name="PocketUser" EntityType="Self.PocketUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UWallet" EntityType="Self.UWallet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Transaction_PocketUser" Association="Self.FK_Transaction_PocketUser">
+      <End Role="PocketUser" EntitySet="PocketUser" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UWallet_PocketUser" Association="Self.FK_UWallet_PocketUser">
+      <End Role="PocketUser" EntitySet="PocketUser" />
+      <End Role="UWallet" EntitySet="UWallet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

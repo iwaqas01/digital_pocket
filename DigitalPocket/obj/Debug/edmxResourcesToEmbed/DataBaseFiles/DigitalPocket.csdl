@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DigitalPocketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PocketUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Transaction" Relationship="Self.FK_Transaction_PocketUser" FromRole="PocketUser" ToRole="Transaction" />
+    <NavigationProperty Name="UWallet" Relationship="Self.FK_UWallet_PocketUser" FromRole="PocketUser" ToRole="UWallet" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="TransactionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ammount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OriginAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PocketUser" Relationship="Self.FK_Transaction_PocketUser" FromRole="Transaction" ToRole="PocketUser" />
+  </EntityType>
+  <EntityType Name="UWallet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Ammount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="PocketUser" Relationship="Self.FK_UWallet_PocketUser" FromRole="UWallet" ToRole="PocketUser" />
+  </EntityType>
+  <Association Name="FK_Transaction_PocketUser">
+    <End Role="PocketUser" Type="Self.PocketUser" Multiplicity="0..1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PocketUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UWallet_PocketUser">
+    <End Role="PocketUser" Type="Self.PocketUser" Multiplicity="0..1" />
+    <End Role="UWallet" Type="Self.UWallet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PocketUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UWallet">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DigitalPocketContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PocketUser" EntityType="Self.PocketUser" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" />
+    <EntitySet Name="UWallet" EntityType="Self.UWallet" />
+    <AssociationSet Name="FK_Transaction_PocketUser" Association="Self.FK_Transaction_PocketUser">
+      <End Role="PocketUser" EntitySet="PocketUser" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UWallet_PocketUser" Association="Self.FK_UWallet_PocketUser">
+      <End Role="PocketUser" EntitySet="PocketUser" />
+      <End Role="UWallet" EntitySet="UWallet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
